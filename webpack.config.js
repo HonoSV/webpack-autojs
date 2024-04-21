@@ -41,7 +41,8 @@ scriptConfig.projects.forEach(project => {
     to: toPath,
     globOptions: {
       ignore: ['**/*.js', '**/*.ts']
-    }
+    },
+    noErrorOnMissing: true // 避免在目标文件夹为空时报错
   };
   // console.error(pattern);
   copyPatterns.push(pattern);
